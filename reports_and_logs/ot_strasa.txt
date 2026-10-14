@@ -1,0 +1,53 @@
+0
+7.72101
+0
+0.33177
+Startpoint    : _10890_:CLK
+Endpoint      : _11315_:D
+Analysis type : max
+------------------------------------------------------
+       Type       Delay        Time   Dir  Description
+------------------------------------------------------
+        pin       0.000       0.000       0.000  rise  _10890_:CLK (sky130_fd_sc_hd__dfrtp_1)
+        pin       7.731       7.731       2.033  rise  _10890_:Q (sky130_fd_sc_hd__dfrtp_1)
+        pin       0.000       7.731       0.000  rise  _8791_:A (sky130_fd_sc_hd__lpflow_clkinvkapwr_1)
+        pin       2.689      10.420      -0.038  fall  _8791_:Y (sky130_fd_sc_hd__lpflow_clkinvkapwr_1)
+        pin       0.000      10.420       0.000  fall  _8792_:A (sky130_fd_sc_hd__lpflow_clkbufkapwr_1)
+        pin       0.680      11.100      -0.043  fall  _8792_:X (sky130_fd_sc_hd__lpflow_clkbufkapwr_1)
+        pin       0.000      11.100       0.000  fall  _8793_:A (sky130_fd_sc_hd__clkbuf_1)
+        pin       0.253      11.353      -0.028  fall  _8793_:X (sky130_fd_sc_hd__clkbuf_1)
+        pin       0.000      11.353       0.000  fall  _8794_:A (sky130_fd_sc_hd__clkbuf_1)
+        pin       0.214      11.567      -0.024  fall  _8794_:X (sky130_fd_sc_hd__clkbuf_1)
+        pin       0.000      11.567       0.000  fall  _10276_:B2 (sky130_fd_sc_hd__a22oi_1)
+        pin       0.176      11.742       0.015  rise  _10276_:Y (sky130_fd_sc_hd__a22oi_1)
+        pin       0.000      11.742       0.000  rise  _10277_:B1 (sky130_fd_sc_hd__o22ai_1)
+        pin       0.110      11.852       0.001  fall  _10277_:Y (sky130_fd_sc_hd__o22ai_1)
+        pin       0.000      11.852       0.000  fall  _10278_:B (sky130_fd_sc_hd__nand2_1)
+        pin       0.068      11.920       0.008  rise  _10278_:Y (sky130_fd_sc_hd__nand2_1)
+        pin       0.000      11.920       0.000  rise  _10279_:B1 (sky130_fd_sc_hd__o21ai_0)
+        pin       0.110      12.031      -0.001  fall  _10279_:Y (sky130_fd_sc_hd__o21ai_0)
+        pin       0.000      12.031       0.000  fall  _11315_:D (sky130_fd_sc_hd__dfrtp_1)
+    arrival                  12.031        data arrival time
+
+related pin      20.000      20.000  rise  _11315_:CLK (sky130_fd_sc_hd__dfrtp_1)
+ constraint      -0.248      19.752        library setup_rising
+   required                  19.752        data required time
+------------------------------------------------------
+      slack                   7.721        MET
+Startpoint    : _11480_:CLK
+Endpoint      : done
+Analysis type : min
+------------------------------------------------------
+       Type       Delay        Time   Dir  Description
+------------------------------------------------------
+        pin       0.000       0.000       0.000  rise  _11480_:CLK (sky130_fd_sc_hd__dfrtp_1)
+        pin       0.332       0.332       0.026  rise  _11480_:Q (sky130_fd_sc_hd__dfrtp_1)
+       port       0.000       0.332       0.000  rise  done
+    arrival                   0.332        data arrival time
+
+       port      -0.000      -0.000        output port delay
+   required                   0.000        data required time
+------------------------------------------------------
+      slack                   0.332        MET
+9.05e+04
+39.8

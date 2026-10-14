@@ -1,0 +1,86 @@
+7.72101
+0.33177
+90462.4
+0
+13.5047
+0
+0.33177
+Startpoint    : _18772_:CLK
+Endpoint      : _11108_:D
+Analysis type : max
+------------------------------------------------------
+       Type       Delay        Time   Dir  Description
+------------------------------------------------------
+        pin       0.000       0.000       0.000  rise  _18772_:CLK (sky130_fd_sc_hd__dfrtp_1)
+        pin       0.423       0.423      -0.008  fall  _18772_:Q (sky130_fd_sc_hd__dfrtp_1)
+        pin       0.000       0.423       0.000  fall  _10686_:A (sky130_fd_sc_hd__nor3b_1)
+        pin       0.665       1.088       0.049  rise  _10686_:Y (sky130_fd_sc_hd__nor3b_1)
+        pin       0.000       1.088       0.000  rise  _10687_:A (sky130_fd_sc_hd__clkbuf_1)
+        pin       0.989       2.078       0.180  rise  _10687_:X (sky130_fd_sc_hd__clkbuf_1)
+        pin       0.000       2.078       0.000  rise  _10753_:SLEEP (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+        pin       0.147       2.225      -0.003  fall  _10753_:X (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+        pin       0.000       2.225       0.000  fall  _12540_:C (sky130_fd_sc_hd__xnor3_1)
+        pin       0.249       2.474       0.009  fall  _12540_:X (sky130_fd_sc_hd__xnor3_1)
+        pin       0.000       2.474       0.000  fall  _12547_:B (sky130_fd_sc_hd__or3b_2)
+        pin       0.459       2.933       0.005  fall  _12547_:X (sky130_fd_sc_hd__or3b_2)
+        pin       0.000       2.933       0.000  fall  _12550_:A2 (sky130_fd_sc_hd__a21oi_1)
+        pin       0.194       3.127       0.019  rise  _12550_:Y (sky130_fd_sc_hd__a21oi_1)
+        pin       0.000       3.127       0.000  rise  _12558_:A2 (sky130_fd_sc_hd__o21ai_0)
+        pin       0.121       3.247      -0.006  fall  _12558_:Y (sky130_fd_sc_hd__o21ai_0)
+        pin       0.000       3.247       0.000  fall  _12567_:A2 (sky130_fd_sc_hd__a21oi_1)
+        pin       0.222       3.469       0.021  rise  _12567_:Y (sky130_fd_sc_hd__a21oi_1)
+        pin       0.000       3.469       0.000  rise  _12581_:A2 (sky130_fd_sc_hd__o21bai_1)
+        pin       0.098       3.567      -0.002  fall  _12581_:Y (sky130_fd_sc_hd__o21bai_1)
+        pin       0.000       3.567       0.000  fall  _12584_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.197       3.764       0.005  fall  _12584_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       3.764       0.000  fall  _12592_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.189       3.954       0.006  fall  _12592_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       3.954       0.000  fall  _12600_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.192       4.145       0.005  fall  _12600_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       4.145       0.000  fall  _12607_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.193       4.338       0.005  fall  _12607_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       4.338       0.000  fall  _12616_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.193       4.531       0.005  fall  _12616_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       4.531       0.000  fall  _12623_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.193       4.724       0.005  fall  _12623_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       4.724       0.000  fall  _12632_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.193       4.918       0.005  fall  _12632_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       4.918       0.000  fall  _12639_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.193       5.111       0.005  fall  _12639_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       5.111       0.000  fall  _12648_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.193       5.304       0.005  fall  _12648_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       5.304       0.000  fall  _12655_:A2 (sky130_fd_sc_hd__a21o_1)
+        pin       0.200       5.503       0.003  fall  _12655_:X (sky130_fd_sc_hd__a21o_1)
+        pin       0.000       5.503       0.000  fall  _12664_:A2 (sky130_fd_sc_hd__a21oi_1)
+        pin       0.198       5.701       0.020  rise  _12664_:Y (sky130_fd_sc_hd__a21oi_1)
+        pin       0.000       5.701       0.000  rise  _12666_:B (sky130_fd_sc_hd__nor3_1)
+        pin       0.085       5.787      -0.003  fall  _12666_:Y (sky130_fd_sc_hd__nor3_1)
+        pin       0.000       5.787       0.000  fall  _12672_:A (sky130_fd_sc_hd__xnor3_1)
+        pin       0.340       6.126       0.044  fall  _12672_:X (sky130_fd_sc_hd__xnor3_1)
+        pin       0.000       6.126       0.000  fall  _9056_:A0 (sky130_fd_sc_hd__mux2_2)
+        pin       0.256       6.382       0.010  fall  _9056_:X (sky130_fd_sc_hd__mux2_2)
+        pin       0.000       6.382       0.000  fall  _11108_:D (sky130_fd_sc_hd__dfrtp_1)
+    arrival                   6.382        data arrival time
+
+related pin      20.000      20.000  rise  _11108_:CLK (sky130_fd_sc_hd__dfrtp_1)
+ constraint      -0.113      19.887        library setup_rising
+   required                  19.887        data required time
+------------------------------------------------------
+      slack                  13.505        MET
+Startpoint    : _11480_:CLK
+Endpoint      : done
+Analysis type : min
+------------------------------------------------------
+       Type       Delay        Time   Dir  Description
+------------------------------------------------------
+        pin       0.000       0.000       0.000  rise  _11480_:CLK (sky130_fd_sc_hd__dfrtp_1)
+        pin       0.332       0.332       0.026  rise  _11480_:Q (sky130_fd_sc_hd__dfrtp_1)
+       port       0.000       0.332       0.000  rise  done
+    arrival                   0.332        data arrival time
+
+       port      -0.000      -0.000        output port delay
+   required                   0.000        data required time
+------------------------------------------------------
+      slack                   0.332        MET
+9.05e+04
+39.8
