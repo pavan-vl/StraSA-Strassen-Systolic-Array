@@ -84,7 +84,7 @@ All numbers are pre-layout, at the TT corner, with a 20 ns reference clock. Thro
 
 4. **The extra adders end up setting the clock.** In the first synthesis run, StraSA's critical path came from a high-fanout control signal: one flip-flop in the step counter was driving the select lines of every feed multiplexer. Upsizing that flip-flop, its neighbour and two buffers on that net cut the clock period from 12.28 ns to 6.50 ns, for about 10 µm² of extra area. After that, the critical path moved to the Strassen output accumulators (the add/subtract stage after the array). The direct design has no such stage, so its clock is limited only by the PE multiply-accumulate.
 
-**Why this happens:** in a systolic array the multipliers are built into every PE and the PE count is fixed. Strassen's saved multiplication is therefore "free" hardware that was going to be there anyway, while its extra additions are new hardware that costs both area and critical-path delay. This is consistent with why production matrix accelerators such as Google's TPU use direct multiplication.
+**Why this happens:** in a systolic array the multipliers are built into every PE and the PE count is fixed. Strassen's saved multiplication is therefore "free" hardware that was going to be there anyway, while its extra additions are new hardware that costs both area and critical-path delay. This is consistent with why production matrix accelerators such as Google's TPU seem to use direct multiplication.
 
 ---
 
