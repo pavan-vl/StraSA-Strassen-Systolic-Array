@@ -4,7 +4,7 @@
 
 Strassen's algorithm is known for doing a block matrix multiply with 7 multiplications instead of 8. In software this is a clear win, because multiplications are expensive. This project asks whether that saving still holds when the multiplications run on a systolic array, where the multipliers are fixed hardware.
 
-Therfore, I designed two 4×4 matrix multipliers that share the same 2×2 systolic array: one conventional (direct) and one using Strassen's algorithm (StraSA). I took both through RTL simulation, synthesis on the SkyWater 130 nm process, and static timing analysis, and then compared them on area, clock speed, latency and throughput.
+Therefore, I designed two 4×4 matrix multipliers that share the same 2×2 systolic array: one conventional (direct) and one using Strassen's algorithm (StraSA). I took both through RTL simulation, synthesis on the SkyWater 130 nm process, and static timing analysis, and then compared them on area, clock speed, latency and throughput.
 
 **Short answer: no.** StraSA saves cycles, but it ends up slightly slower overall and almost twice the area.
 
@@ -53,6 +53,20 @@ A few design choices common to both:
 | Synthesis | Yosys + ABC, SkyWater sky130_fd_sc_hd standard cells (TT corner, 25 °C, 1.8 V) |
 | Static timing, area, leakage | OpenTimer |
 | Gate sizing | Manual drive-strength upsizing in OpenTimer |
+
+---
+
+## Simulation
+
+Both designs were checked with self-checking testbenches that run three 4×4 test cases: a small mixed-sign example, larger values of both signs, and the worst case where every input is −128 (every output is 65,536). Each result is compared with plain A × B, and all three tests pass for both designs.
+
+**StraSA**
+
+![StraSA waveform](sim-results/strasa_waveform.png)
+
+**Direct**
+
+![Direct waveform](sim-results/direct_waveform.png)
 
 ---
 
@@ -106,10 +120,7 @@ All numbers are pre-layout, at the TT corner, with a 20 ns reference clock. Thro
 ## Repository structure
 
 ```
-rtl/
-  direct/          Direct design: top, systolic array, PE, multiplier, adder
-  strasa/          StraSA design: same blocks plus the 2×2 block pre-adder
-tb/                Self-checking testbenches (3 test matrices each)
+rtl/               RTL for both designs and their self-checking testbenches
 constraints/       SDC timing constraints
 scripts/           Yosys and OpenTimer scripts, liberty helper (make_ot_libs.py)
 netlists/          Gate-level netlists from Yosys, plus the upsized StraSA netlist
@@ -124,8 +135,9 @@ The scripts expect the RTL, scripts, constraints and liberty files in one workin
 
 **Simulation**
 ```
-iverilog -g2012 -o strasa tb/tb_strasa.sv rtl/strasa/*.v && vvp strasa
-iverilog -g2012 -o direct tb/tb_direct.sv rtl/direct/*.v && vvp direct
+cd rtl
+iverilog -g2012 -o strasa tb_strasa.sv *.v && vvp strasa
+iverilog -g2012 -o direct tb_direct.sv *.v && vvp direct
 ```
 
 **Synthesis**
