@@ -4,7 +4,7 @@
 
 Strassen's algorithm is known for doing a block matrix multiply with 7 multiplications instead of 8. In software this is a clear win, because multiplications are expensive. This project asks whether that saving still holds when the multiplications run on a systolic array, where the multipliers are fixed hardware.
 
-To find out, I designed two 4×4 matrix multipliers that share the same 2×2 systolic array: one conventional (direct) and one using Strassen's algorithm (StraSA). I took both through RTL simulation, synthesis on the SkyWater 130 nm process, and static timing analysis, and then compared them on area, clock speed, latency and throughput.
+Therfore, I designed two 4×4 matrix multipliers that share the same 2×2 systolic array: one conventional (direct) and one using Strassen's algorithm (StraSA). I took both through RTL simulation, synthesis on the SkyWater 130 nm process, and static timing analysis, and then compared them on area, clock speed, latency and throughput.
 
 **Short answer: no.** StraSA saves cycles, but it ends up slightly slower overall and almost twice the area.
 
