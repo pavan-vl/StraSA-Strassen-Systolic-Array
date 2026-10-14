@@ -83,6 +83,8 @@ module tb_strasa_4x4_top;
 
     initial
     begin
+        $dumpfile("strasa.vcd");
+        $dumpvars(0, tb_strasa_4x4_top);
         clk          = 1'b0;
         rst_n        = 1'b0;
         start        = 1'b0;
