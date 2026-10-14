@@ -83,6 +83,8 @@ module tb_direct_sa_4x4_top;
 
     initial
     begin
+        $dumpfile("direct.vcd");
+        $dumpvars(0, tb_direct_4x4_top);
         clk          = 1'b0;
         rst_n        = 1'b0;
         start        = 1'b0;
